@@ -49,6 +49,7 @@ export const sendMail = async (email, user, str) => {
       </h1>
     </div>`,
     });
+    console.log("Email has been sent");
   } catch (error) {
     console.log(error);
   }
