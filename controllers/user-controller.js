@@ -47,7 +47,9 @@ export async function Signup(req, res) {
   } catch (error) {
     return console.log(error);
   }
-  return res.status(201).json({ user });
+  return res
+    .status(201)
+    .json({ message: "Account Created Successfully", user });
 }
 
 //Login:
@@ -127,7 +129,7 @@ export async function OtpVerfication(req, res) {
   } else {
     await String.deleteOne({ _id: _id });
   }
-  return res.status(200).json({ message: "GO to the next page" });
+  return res.status(200).json({ message: "Email verified successfully." });
 }
 
 export async function ResetPassword(req, res) {
@@ -142,7 +144,7 @@ export async function ResetPassword(req, res) {
     const updateUser = await User.findByIdAndUpdate(_id, {
       $set: { password: hashedPassword },
     });
-    return res.json(updateUser);
+    return res.json({ message: "Password changed successfully", updateUser });
   } else {
     return res.status(400).json({ message: "Incorrect password match" });
   }
