@@ -29,7 +29,7 @@ export const sendMail = async (email, user, str) => {
     >
       <h1 style="color: blue">Hi ${user.name}, </h1>
       <p style="font-style: italic; font-size: 25px; text-align: center; margin: 5px; font-weight: bold;">
-        Please enter the below string into your email verification page👇👇
+        Please enter the below OTP into your email verification page👇👇
       </p>
       <h1
         style="
