@@ -113,6 +113,7 @@ export async function ForgotPassword(req, res) {
   }
 }
 
+//OTP verfication:
 export async function OtpVerfication(req, res) {
   const _id = req.params.id;
   const OTP = req.body.OTP;
